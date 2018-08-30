@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import cd from './assets/cs_image.png';
 import piedpiper_gray from './assets/piedpier-gray.png';
 import piedpiper_red from './assets/piedpiper-red.png';
@@ -13,12 +14,15 @@ const renderPiper = () => {
     if (i % 2) {
       result.push(
         <img src={piedpiper_red} className="footer-image-piper-red" style={{ left: leftSize * i }} />,
-        <img src={piedpiper_green} className="footer-image-piper-green footer-image-piper" style={{ left: leftSize * i }} />
+        <img src={piedpiper_green} className="footer-image-piper-green footer-image-piper"
+             style={{ left: leftSize * i }} />
       );
     } else {
       result.push(
-        <img src={piedpiper_red} className="footer-image-piper-red footer-image-piper" style={{ left: leftSize * i }} />,
-        <img src={piedpiper_green} className="footer-image-piper-green footer-image-piper-invert" style={{ left: leftSize * i }} />
+        <img src={piedpiper_red} className="footer-image-piper-red footer-image-piper"
+             style={{ left: leftSize * i }} />,
+        <img src={piedpiper_green} className="footer-image-piper-green footer-image-piper-invert"
+             style={{ left: leftSize * i }} />
       );
     }
   }
@@ -26,6 +30,11 @@ const renderPiper = () => {
 };
 
 class App extends Component {
+  componentDidMount() {
+    ReactGA.initialize('UA-124884503-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+
   render() {
     return (
       <div className="App">
@@ -88,6 +97,29 @@ class App extends Component {
           <div className="pied-pier-footer-img">
             {renderPiper()}
           </div>
+          <div className="custom-code">
+            <div>
+              <div>We are community of dev who want to build all silicon valley TV series apps.</div>
+              <div>To continue to develop this types of projects we need donations.</div>
+              <div>We want to build "Not a hot dog app" any amount of money will help.</div>
+            </div>
+            <button  onClick={()=>{
+              console.log("go");
+              console.log(ReactGA);
+              ReactGA.event({
+                category: 'Donate',
+                action: 'Hover over donate',
+              });
+            }}>ba</button>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick" />
+              <input type="hidden" name="hosted_button_id" value="7XTME784VNVTY" />
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
+                     name="submit" alt="PayPal - The safer, easier way to pay online!" />
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
+                   height="1" />
+            </form>
+          </div>
           <div className="copyright-container">
             <div>
               <div className="privacy-policy">privacy policy</div>
@@ -97,7 +129,8 @@ class App extends Component {
               <span className="footer-pied-piper-name">PiedPieperChina</span>
               <span>homepage</span>
             </div>
-            <span className="footer-terms">terms of use</span>
+            <span className="footer-terms">terms of use
+            </span>
           </div>
         </footer>
       </div>
