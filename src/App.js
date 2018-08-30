@@ -103,14 +103,6 @@ class App extends Component {
               <div>To continue to develop this types of projects we need donations.</div>
               <div>We want to build "Not a hot dog app" any amount of money will help.</div>
             </div>
-            <button  onClick={()=>{
-              console.log("go");
-              console.log(ReactGA);
-              ReactGA.event({
-                category: 'Donate',
-                action: 'Hover over donate',
-              });
-            }}>ba</button>
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
               <input type="hidden" name="cmd" value="_s-xclick" />
               <input type="hidden" name="hosted_button_id" value="7XTME784VNVTY" />
