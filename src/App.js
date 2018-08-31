@@ -32,7 +32,7 @@ const renderPiper = () => {
 
 class App extends Component {
   componentDidMount() {
-    ReactGA.initialize('UA-124884503-1');
+    ReactGA.initialize('UA-125025103-1');
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
