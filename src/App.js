@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import cd from './assets/cs_image.png';
 import piedpiper_gray from './assets/piedpier-gray.png';
+import song from './assets/Abba - Super Trouper.mp3';
 import piedpiper_red from './assets/piedpiper-red.png';
 import piedpiper_violet from './assets/piedpiper-violet.svg';
 import piedpiper_green from './assets/piedpiper-green.png';
@@ -128,9 +129,9 @@ class App extends Component {
             <span className="footer-terms">terms of use
             </span>
           </div>
-          <audio controls autoPlay loop>
+          <audio controls autoPlay loop controlsList="nodownload">
             <source
-              src="https://doc-0k-b8-docs.googleusercontent.com/docs/securesc/dfbbr4t85dfp5c749d3cimiu2jkud2ra/0h6ucek3tdnmgadk22njt7jk3v6jvpon/1535659200000/01999363569706584779/16269622753559003075/0B-gf7hTtaG1NYlk1VGd1WHhKZmc?e=download"
+              src={song}
               type="audio/mpeg" />
           </audio>
         </footer>
