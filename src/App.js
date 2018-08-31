@@ -100,10 +100,13 @@ class App extends Component {
           </div>
           <div className="custom-code">
             <div>
-              <div>We are a community of developers who want to build all silicon valley TV series apps. To continue to develop
+              <div>We are a community of developers who want to build all silicon valley TV series apps. To continue to
+                develop
                 this types of projects we need donations.
               </div>
-              <div>Also if you donate you will get the chance to appear on the website as a top investor. We want to build "Not a hot dog app" any amount of money will help.</div>
+              <div>Also if you donate you will get the chance to appear on the website as a top investor. We want to
+                build "Not a hot dog app" any amount of money will help.
+              </div>
             </div>
             <div>
               <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">

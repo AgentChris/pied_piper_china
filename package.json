@@ -1,7 +1,7 @@
 {
   "name": "pied_piper_china",
   "version": "0.1.0",
-  "homepage": "https://agentchris.github.io/pied_piper_china",
+  "homepage": "http://newpiedpiper.com/",
   "private": true,
   "dependencies": {
     "react": "^16.4.2",
