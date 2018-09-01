@@ -125,7 +125,7 @@ main {
 .live-count-container {
   z-index: 1;
   position: relative;
-  left:0;
+  left: 0;
   right: 0;
   margin-top: -20px;
   text-align: center;
@@ -355,4 +355,9 @@ footer {
   justify-content: space-around;
   margin-top: 150px;
   margin-bottom: 30px;
+}
+
+.z-index-top{
+  position: relative;
+  z-index: 1;
 }
