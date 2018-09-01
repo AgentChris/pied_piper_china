@@ -93,6 +93,10 @@ class App extends Component {
     const { answer } = this.state;
     if (answer === "the best pied pipa") {
       this.setState({ showCongrats: true, });
+      ReactGA.event({
+        category: 'play',
+        action: 'finalfinal'
+      });
     } else {
       this.setState({ message: true });
     }
