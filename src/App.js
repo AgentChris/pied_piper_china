@@ -202,7 +202,7 @@ class App extends Component {
               <div>
                 <label>Enter answer to joine pied pipa china</label>
                 <input type="text" value={answer} onChange={this.changeAnswer} placeholder="check answer" />
-                {message ? <span><img src={antoanSrc} />"nope try again"</span> : null}
+                {message && !showCongrats ? <span><img src={antoanSrc} />"nope try again"</span> : null}
                 <button onClick={this.checkAnswer}>checku</button>
                 {showCongrats ? <img src={handshakeSrc} /> : null}
               </div>
