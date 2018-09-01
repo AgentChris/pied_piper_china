@@ -57,8 +57,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log("there is a contest the first person who will find the secret 'hidden message' and have twitter post with the " +
-      "message: #newpiedpiper #piedpiper http://newpiedpiper.com/ 'hidden message' ");
+    console.log("there is a contest the first person who will find the secret hidden message and have twitter post with the " +
+      "message: '#newpiedpiper #piedpiper http://newpiedpiper.com/' + 'hidden message' ");
     console.log("click pied piper * 4");
     ReactGA.initialize('UA-125025103-1');
     ReactGA.pageview(window.location.pathname + window.location.search);
