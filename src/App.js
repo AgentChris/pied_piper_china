@@ -62,11 +62,20 @@ class App extends Component {
   }
 
   showBadASs = () => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
     this.setState((state) => ({ showCool: !state.showCool, atLeastOneshowCool: true }));
+    ReactGA.event({
+      category: 'play',
+      action: 'bad'
+    });
   };
 
   changeAnswer = (e) => {
     this.setState({ answer: e.target.value });
+    ReactGA.event({
+      category: 'play',
+      action: 'almostanswer'
+    });
   };
 
   showPipa = () => {
@@ -74,6 +83,10 @@ class App extends Component {
     if (this.state.click4times > 3) {
       this.setState({ optionAnswer: true, ericDeatch: true });
     }
+    ReactGA.event({
+      category: 'play',
+      action: 'pipa'
+    });
   };
 
   checkAnswer = () => {
@@ -83,13 +96,25 @@ class App extends Component {
     } else {
       this.setState({ message: true });
     }
+    ReactGA.event({
+      category: 'play',
+      action: 'final'
+    });
   };
 
   showIsGone = () => {
     this.setState((state) => ({ showIsGone: !state.showIsGone, atLeastOneshowIsGone: true }));
+    ReactGA.event({
+      category: 'play',
+      action: 'gone'
+    });
   };
   showIsOcasion = (val) => {
     this.setState((state) => ({ showIsOcasion: val, atLeastOneshowsOcasion: true }));
+    ReactGA.event({
+      category: 'play',
+      action: 'ocasion'
+    });
   };
 
   render() {
