@@ -229,7 +229,7 @@ class App extends Component {
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
                      height="1" />
               </form>
-              <div>Money raised: 200$ out of 1000$ for "not a hot dog app".</div>
+              <div>Money raised: 563$ out of 1000$ for "not a hot dog app".</div>
             </div>
           </div>
           <div className="copyright-container">
